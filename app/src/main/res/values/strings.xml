@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Vocabolario Casu</string>
+    <string name="title_word_detail">Word Detail</string>
+    <string name="hint">Search word</string>
+    <string name="search">Search</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="createdBy">Created by Davide Pala</string>
+    <string name="fraigadaDae">Fraigàda dàe Davide Pala</string>
+    <string name="messedApps">MeSSedApps 2015</string>
+</resources>
