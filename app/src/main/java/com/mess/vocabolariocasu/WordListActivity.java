@@ -104,10 +104,18 @@ public class WordListActivity extends ActionBarActivity
                     );
             Cursor cursor = cursorLoader.loadInBackground();
             if(cursor != null) {
-                if (cursor.getCount() > 0) {
+                if (cursor.getCount() == 1) {
                     int index = cursor.getColumnIndexOrThrow(BaseColumns._ID);
                     int id = cursor.getInt(index);
                     onItemSelected(Integer.toString(id));
+                }else if( cursor.getCount() > 1){
+                    int index = cursor.getColumnIndexOrThrow(BaseColumns._ID);
+                    int id = cursor.getInt(index);
+                    ((WordListFragment) getSupportFragmentManager()
+                            .findFragmentById(R.id.word_list))
+                            .getListView()
+                            .setSelection(id-1);
+                            //smoothScrollToPosition(id);
                 } else {
                     Toast.makeText(getBaseContext(), "Not Found", Toast.LENGTH_SHORT).show();
                 }
